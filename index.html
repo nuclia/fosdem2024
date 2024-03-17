@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Nuclia - Fosdem 2024</title>
+  </head>
+  <body>
+    <h1>Nuclia loves Fosdem - 2024 Knowledge Box ready to use</h1>
+    At Nuclia we love Fosdem conference and we decided to provide its content
+    with our AI engine so everybody can interact with its content.
+
+    <h2>Try it! with Mixtral LLM</h2>
+    <script src="https://cdn.nuclia.cloud/nuclia-video-widget.umd.js"></script>
+    <nuclia-search-bar
+      knowledgebox="ace5bccb-5d5b-45d6-830a-3b0db0c26827"
+      zone="europe-1"
+      features="answers,permalink,navigateToLink,navigateToFile,hideThumbnails,autocompleteFromNERs,relations"
+    ></nuclia-search-bar>
+    <nuclia-search-results></nuclia-search-results>
+
+    <h2>How we uploaded Fosdem conference to Nuclia</h2>
+
+    The script to scappy and get all videos/slides from Fosdem webside:
+    <a href="download.py">Script</a>
+
+    The script to upload all Fosdem videos/slides to Nuclia is located here:
+    <a href="script.py">Script</a>
+
+    <h2>Locally replicate Fosdem Knowledge box in a local NucliaDB</h2>
+    If you want to store a copy of the database with all the data processed you
+    need NucliaDB, NucliaSDK, a Nuclia API Key and the export of the database in
+    a file (Alert this file is big as it holds all web ready previews of all
+    files).
+    <pre>
+      pip install nucliadb
+      pip install nuclia
+      nuclia
+    </pre>
+
+    <h2>Extra information</h2>
+    Configuration used:
+
+    <ul>
+      <li>Semantic model: <em>multilingual-2023-02-21</em></li>
+      <li>Chunking: <em>3000</em></li>
+    </ul>
+
+    Knowledge Box metrics:
+
+    <ul>
+      <li>Resources: <em>825</em></li>
+      <li>Fields: <em>2033</em></li>
+      <li>Text blocks: <em>72920</em></li>
+      <li>Vectors: <em>69177</em></li>
+      <li>Index size: <em>695.42 MB</em></li>
+    </ul>
+  </body>
+</html>
